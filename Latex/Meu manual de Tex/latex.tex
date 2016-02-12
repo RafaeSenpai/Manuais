@@ -1,11 +1,13 @@
 %tudo o que está a seguir a esta percentagem nao é comentado, assim se faz comentarios no "código" em latex
 
-\documentclass[a4paper,11pt]{report}%deve ser sempre a primeira linha de codigo num documento em latex,define-se o tipo de documento "article"(1), tamanho de folha "a4paper" e o tamanho de letra "9pt". Estes parametros são necessários para uma correta modelação e impressão do documento em questão
+\documentclass[a4paper,11pt]{article}%deve ser sempre a primeira linha de codigo num documento em latex,define-se o tipo de documento "article"(1), tamanho de folha "a4paper" e o tamanho de letra "9pt". Estes parametros são necessários para uma correta modelação e impressão do documento em questão
 % (1)
 % {article} - artigos, pequenos relatorios,documentação de programas, convites
 % {report} - relatorios mais complexos, contendo varios capitulos, pequenos livros, testes de doutoramento
 % {book} - o nome diz tudo
 % {slides} - o nome diz tudo
+%\usepackage{aeguill}
+\usepackage{hyperref}%necessário para linkar o indice
 
 \usepackage[portuguese]{babel} %para traduzir todo o conteudo da estrutura documental para portugues
 
@@ -16,24 +18,46 @@
 
 \usepackage{fancyhdr} %para poder usar o fancy, isto é, criar caso necessário o meu proprio cabeçalho
 
+\usepackage{color}%necessário para coloração dos exertos de codigo comentado
+
 \usepackage{indentfirst} %caso o objectivo é indentar a primeira linha do parágrafo, isto é, usar o,\indent
 %todo o que está para traz, diz respeito apenas a configurações e bibliotecas necessárias para aplicar formatações ao ficheiro a ser criado
 
 
 \usepackage{listings} %este pacote é usado para poder interpretar os exertos de código como se estivessem a ser apresentados no IDE
-\lstdefinestyle{customc}{%tudo o que se encontra dentro destas chavetas é para definir as cores a atribuir a cada detalhe dos extratos de codigo colocados na documentação
-  belowcaptionskip=1\baselineskip,
-  breaklines=true,
-  frame=L,
-  xleftmargin=\parindent,
-  language=C,
-  showstringspaces=false,
-  basicstyle=\footnotesize\ttfamily,
-  keywordstyle=\bfseries\color{green!40!black},
-  commentstyle=\itshape\color{purple!40!black},
-  identifierstyle=\color{blue},
-  stringstyle=\color{orange},
+ 
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %tudo o que se encontra dentro destas chavetas é para definir as cores a atribuir a cada detalhe dos extratos de codigo colocados na documentação
+  backgroundcolor=\color{white},   
+  basicstyle=\footnotesize,        
+  breakatwhitespace=false,         
+  breaklines=true,                 
+  captionpos=t,                    
+  commentstyle=\color{mygreen},    
+  deletekeywords={...},            
+  escapeinside={\%*}{*)},          
+  extendedchars=true,              
+  frame=L,	                       
+  keepspaces=true,                 
+  keywordstyle=\color{blue},       
+  language=C,                
+  otherkeywords={*,...},           
+  numbers=left,                    
+  numbersep=10pt,                  
+  numberstyle=\tiny\color{mygray}, 
+  rulecolor=\color{black},         
+  showspaces=false,                
+  showstringspaces=false,          
+  showtabs=false,                  
+  stepnumber=1,                    
+  stringstyle=\color{mymauve},     
+  tabsize=2,	                   
+  title=\textbf{}          
 }
+
 
 %na linha abaixo encontra-se o parametro que deve ser colocado antes dos extratos de codigo a aplicar as definições acima atribuidas
 %
@@ -101,26 +125,31 @@ Por vezes é necessário fechar o pdf criado pelo latex e recompilar o documento
 
 
 
-\begin {document}%para dar inicio ao documento em si, após as devidas configurações
+\begin{document}%para dar inicio ao documento em si, após as devidas configurações
 
 \maketitle
 \tableofcontents % \tableofcontents funciona como um indice de todas as secções, lista todas as secções. Não é necessário que exista para que se possa usar a opção \section
-
+\listoffigures
 \newpage
-\section{Uso do ''abstract''. O resumo}
-Como se trata de um resumo a formatação do mesmo, leva a que o resumo em si, seja apresentado na pagina seguinte isolado de todo o resto do conteudo. \textbf{ A NUMERAÇÃO DAS PAGINAS RECOMEÇA DO ZERO APÓS A APRESENTAÇÃO DO RESUMO!}
+
 \begin{abstract}
-Em publicações cientificas é habitual iniciar com um resumo que dá ao leitor uma visão rapida do que lhe espera.
+	Como se trata de um resumo a formatação do mesmo, leva a que o resumo em si, seja apresentado na pagina seguinte isolado de todo o resto do conteudo. \textbf{ A NUMERAÇÃO DAS PAGINAS RECOMEÇA DO ZERO APÓS A APRESENTAÇÃO DO RESUMO!}
+	Em publicações cientificas é habitual iniciar com um resumo que dá ao leitor uma visão rapida do que lhe espera.
 \end{abstract}
 
+
+
 \newpage
-\section {Criar uma secção com subsecções}
+
+\section{Criar uma secção com subsecções}
+
 Aqui escrevo algum conteudo referente á 1º secção.
-\subsection {Uma subsecção da 1º secção}
-\subsubsection {1º subsubsecção da 1º subsecção}
-\subsubsection {2º subsubsecção da 1º subsecção}
-\subsubsection {3º subsubsecção da 1º subsecção}
-\section {A minha 2º secção}
+\subsection{Uma subsecção da 1º secção}
+\subsubsection{1º subsubsecção da 1º subsecção}
+\subsubsection{2º subsubsecção da 1º subsecção}
+\subsubsection{3º subsubsecção da 1º subsecção}
+
+\section{A minha 2º secção}
 Aqui escrevo algum conteudo referente á 2º secção.
 
 \paragraph{\ \ \ }%Assim se inserem varias linhas em branco
@@ -134,14 +163,14 @@ Aqui escrevo algum conteudo referente á 2º secção.
 \fbox{Não presisa de estar escrito num retangulo para criarem subparagrafos}
 
 \newpage
-Assim se faz uma nota de rodape\footnote {Nota de rodape} usando ''footnote'' logo a seguir a palavra ao qual diz respeito a nota.
+Assim se faz uma nota de rodape\footnote {Nota de rodape} usando ``footnote'' logo a seguir a palavra ao qual diz respeito a nota.
 \paragraph{\ }
 Cenas escritas para destinguir realmente os textos da nota \\ de rodape.
 
 
 \newpage
 
-\section {Newline, italico, negrito, sublinhado e mudar de de linhan + simbolos tex}
+\section{Newline, italico, negrito, sublinhado e mudar de de linhan + simbolos tex}
 Aqui escrevo algum conteudo referente á 3º secção. E quebro agora...\newline a linha com auxilio do newline e agora com recurso a duas pipes inclinados... \\conforme pode ser visto no codigo tex deste documento. \\*
 O newline é para criar apenas uma simples mudança de linha \\* e este tem que estar antes ou no final e na mesma linha do texto que se quer colocar na linha seguinte. \\*Como se pode confirmar esta frase que estás a ler está numa linha diferente da frase anterior!
 
@@ -153,7 +182,7 @@ Como colocar \textbf {cenas a negrito} numa frase!
 como colocar \underline {texto sublinhado} numa frase!
 
 Usar letra tipo   \texttt{maquina} numa frase!
-\texttt{-\$diff "*.out" "*.res"}
+\texttt{-\$diff `*.ou' `*.res'}
 
 Cenas engraçadas:\newline
 \TeX \newline
@@ -258,9 +287,9 @@ O ano de 1995 ficou marcado por novas áreas de negócio e formas de comunicar, 
 
 %+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 \newpage
-\section {Mostrar pedaços de código de varias maneiras}
+\section{Mostrar pedaços de código de varias maneiras}
 
-\subsection {Simplesmnte visualizando exerto de codigo}
+\subsection{Simplesmnte visualizando exerto de codigo}
 \begin{verbatim}
 int main (int argc, char *argv[]){
 int i; 
@@ -272,13 +301,13 @@ char c = 'a';
 close(file);
 \end{verbatim}
 %-----------------------------------------------------------------------------------------------
-\subsection {Visualizando exerto de codigo com identificação dos espaços}
-\paragraph {A diferença está que é usado o parametro ''verbatim*''.}
+\subsection{Visualizando exerto de codigo com identificação dos espaços}
+\paragraph {A diferença está que é usado o parametro `verbatim*'.}
 \begin{verbatim*}
 int main (int argc, char *argv[]){
 int i; 
 int file = open (argv[1], O_CREAT|O_WRONLY);
-char c = 'a'; 
+char c = `A'; 
 	for(i=0; i<10000000; i++){
 		write (file, &c, 1); 
 	}
@@ -288,16 +317,16 @@ close(file);
 
 
 %------------------------------------------------------------------------------------------------
-\subsection {O mais parecido com o código apresentado num IDE}
+\subsection{O mais parecido com o código apresentado num IDE}
 
 \paragraph {Deve-se ter em atenção o tipo de linguagem do enxerto}
-\begin{lstlisting}[language=c]
+\begin{lstlisting}
 int main (int argc, char *argv[]){
 int i; 
 int file = open (argv[1], O_CREAT|O_WRONLY);
-char c = 'a'; 
-	for(i=0; i<10000000; i++){
-		write (file, &c, 1); 
+char c = `a'; 
+     for(i=0; i<10000000; i++){
+     write (file, &c, 1); 
 	}
 close(file);
 \end{lstlisting}
@@ -339,7 +368,7 @@ close(file);
 
 
 \begin{figure}[!h]
-\paragraph{\textbf{Não esquecer de usar o package ''graphics''}}
+\paragraph{\textbf{Não esquecer de usar o package `graphics'}}
     \begin{center}
     \includegraphics[scale=0.6]{./imagemdeteste.png}
     \caption{Legenda da Imagem}
@@ -354,7 +383,7 @@ O texto que se segue á imagem é rescrito normalmente após o codigo de formata
 
 
 \newpage
-\section {Criar uma bibliografia}
+\section{Criar uma bibliografia}
 Quando criada uma bibliografia, esta reserva uma pagina apenas para o efeito. Assim sendo o exemplo da mesma só pode ser visto na pagina seguinte, quando, por exemplo aplicado o codigo abaixo.
 \begin{verbatim}
 \begin{thebibliography}{99} 
@@ -372,4 +401,4 @@ Quando criada uma bibliografia, esta reserva uma pagina apenas para o efeito. As
 
 
 
-\end {document} % tudo o que é escrito daqui para a frente é ignorado na compilação do latex
+\end{document} % tudo o que é escrito daqui para a frente é ignorado na compilação do latex
