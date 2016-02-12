@@ -1,0 +1,56 @@
+\select@language {portuguese}
+\contentsline {section}{\numberline {0.1}Uso do ''abstract''. O resumo}{2}
+\contentsline {section}{\numberline {0.2}Criar uma sec\IeC {\c c}\IeC {\~a}o com subsec\IeC {\c c}\IeC {\~o}es}{1}
+\contentsline {subsection}{\numberline {0.2.1}Uma subsec\IeC {\c c}\IeC {\~a}o da 1\IeC {\textordmasculine } sec\IeC {\c c}\IeC {\~a}o}{1}
+\contentsline {subsubsection}{1\IeC {\textordmasculine } subsubsec\IeC {\c c}\IeC {\~a}o da 1\IeC {\textordmasculine } subsec\IeC {\c c}\IeC {\~a}o}{1}
+\contentsline {subsubsection}{2\IeC {\textordmasculine } subsubsec\IeC {\c c}\IeC {\~a}o da 1\IeC {\textordmasculine } subsec\IeC {\c c}\IeC {\~a}o}{1}
+\contentsline {subsubsection}{3\IeC {\textordmasculine } subsubsec\IeC {\c c}\IeC {\~a}o da 1\IeC {\textordmasculine } subsec\IeC {\c c}\IeC {\~a}o}{1}
+\contentsline {section}{\numberline {0.3}A minha 2\IeC {\textordmasculine } sec\IeC {\c c}\IeC {\~a}o}{1}
+\contentsline {paragraph}{\ \ \ }{1}
+\contentsline {section}{\numberline {0.4}Paragrafos, subparagrafos e encaixilhamento de texto}{2}
+\contentsline {paragraph}{\unhbox \voidb@x \setbox \@tempboxa \hbox {\color@begingroup \kern \fboxsep {Um paragrafo com cenas escritas dentro de um retangulo!}\kern \fboxsep \color@endgroup }\@tempdima \fboxrule \advance \@tempdima \fboxsep \advance \@tempdima \dp \@tempboxa \hbox {\lower \@tempdima \hbox {\vbox {\hrule height\fboxrule \hbox {\vrule width\fboxrule \relax \vbox {\vskip \fboxsep \box \@tempboxa \vskip \fboxsep }\relax \vrule width\fboxrule }\hrule height\fboxrule }}}}{2}
+\contentsline {subparagraph}{\unhbox \voidb@x \setbox \@tempboxa \hbox {\color@begingroup \kern \fboxsep {Um SUBPARAGRAFO dentro de um retangulo!}\kern \fboxsep \color@endgroup }\@tempdima \fboxrule \advance \@tempdima \fboxsep \advance \@tempdima \dp \@tempboxa \hbox {\lower \@tempdima \hbox {\vbox {\hrule height\fboxrule \hbox {\vrule width\fboxrule \relax \vbox {\vskip \fboxsep \box \@tempboxa \vskip \fboxsep }\relax \vrule width\fboxrule }\hrule height\fboxrule }}}}{2}
+\contentsline {paragraph}{\ }{2}
+\contentsline {paragraph}{\ }{3}
+\contentsline {section}{\numberline {0.5}Newline, italico, negrito, sublinhado e mudar de de linhan + simbolos tex}{4}
+\contentsline {paragraph}{Assim se da enfase a alguma cena e se considera ao mesmo tempo um paragrafo! E caso se queira mudar de linha essa ordem tem que ser dada dentro do paragrafo, como podemos ver}{4}
+\contentsline {paragraph}{Coisas Importantes}{4}
+\contentsline {paragraph}{\ \ }{4}
+\contentsline {paragraph}{Mais coisas importantes}{4}
+\contentsline {paragraph}{\ }{4}
+\contentsline {paragraph}{Indicar, enumerar e descrever}{5}
+\contentsline {subparagraph}{\textbf {\textsl {itemize}}}{5}
+\contentsline {subparagraph}{\textbf {\textsl {enumerate}}}{5}
+\contentsline {subparagraph}{\textbf {\textsl {description}}}{5}
+\contentsline {paragraph}{\ \ \ \ }{5}
+\contentsline {section}{\numberline {0.6}Como usar o Itemize}{5}
+\contentsline {paragraph}{\ \ }{5}
+\contentsline {paragraph}{Exemplo usando o Itemize}{5}
+\contentsline {section}{\numberline {0.7}Como usar o Enumerate}{6}
+\contentsline {paragraph}{\ \ }{6}
+\contentsline {paragraph}{Exemplo usando o Enumerate}{6}
+\contentsline {section}{\numberline {0.8}Como usar o Description}{7}
+\contentsline {paragraph}{\ \ }{7}
+\contentsline {paragraph}{Exemplo usando o Description}{7}
+\contentsline {paragraph}{\ \ }{7}
+\contentsline {section}{\numberline {0.9}Alinhar texto \IeC {\'a} esquerda}{8}
+\contentsline {paragraph}{\ \ }{8}
+\contentsline {section}{\numberline {0.10}Alinhar texto \IeC {\'a} direita}{9}
+\contentsline {paragraph}{\ \ }{9}
+\contentsline {section}{\numberline {0.11}Alinhar texto ao centro}{10}
+\contentsline {paragraph}{\ \ }{10}
+\contentsline {section}{\numberline {0.12}Inserir uma cita\IeC {\c c}\IeC {\~a}o ou verso}{11}
+\contentsline {section}{\numberline {0.13}Mostrar peda\IeC {\c c}os de c\IeC {\'o}digo de varias maneiras}{12}
+\contentsline {subsection}{\numberline {0.13.1}Simplesmnte visualizando exerto de codigo}{12}
+\contentsline {subsection}{\numberline {0.13.2}Visualizando exerto de codigo com identifica\IeC {\c c}\IeC {\~a}o dos espa\IeC {\c c}os}{12}
+\contentsline {paragraph}{A diferen\IeC {\c c}a est\IeC {\'a} que \IeC {\'e} usado o parametro ''verbatim*''.}{12}
+\contentsline {subsection}{\numberline {0.13.3}O mais parecido com o c\IeC {\'o}digo apresentado num IDE}{12}
+\contentsline {subsection}{\numberline {0.13.4}Buscar codigo a outros ficheiros!}{13}
+\contentsline {paragraph}{}{13}
+\contentsline {paragraph}{}{13}
+\contentsline {paragraph}{\ \ }{13}
+\contentsline {paragraph}{\ \ }{13}
+\contentsline {section}{\numberline {0.14}Inserir Imagens}{14}
+\contentsline {paragraph}{\textbf {N\IeC {\~a}o esquecer de usar o package ''graphics''}}{14}
+\contentsline {paragraph}{}{14}
+\contentsline {section}{\numberline {0.15}Criar uma bibliografia}{15}
